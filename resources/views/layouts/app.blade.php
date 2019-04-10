@@ -39,31 +39,31 @@
     <style>
         .hero-image {
             background-image: url(https://campus.campus-star.com/app/uploads/2018/09/logistics-02.jpg);
-            background-color: #cccccc;
+            background-color: #cccccc ;
             background-position: center;
             background-repeat: no-repeat;
-            position: relative;
+            position: relative ;
         }
 
     </style>
 </head>
-<body style="overflow:hidden; ">
+<body >
 <div class="site-blocks-cover overlay hero-image" >
 
 <nav class="navbar navbar-expand-mdm" >
-    <header class="site-navbar py-3" role="banner" style="margin-top: 30px;" >
+    <header class="site-navbar py-3" role="banner" style="margin-top: 30px; margin-left: -100px; " >
 
         <div class="container">
-            <div class="row align-items-center">
-
+            <div class=" align-items-center" style="margin-top: -200px;margin-right: -400px;">
                 <div class="col-11 col-xl-2">
-                    <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1>
+
+                    <h1 class="mb-0"  style="margin-top: 200px;"><a href="/index" class="text-white h2 mb-0">Logistics</a></h1>
                 </div>
-                <div class="col-12 col-md-10 d-none d-xl-block">
+                <div class="col-12 col-md-10 d-none d-xl-block "  style="margin-top: -60px;">
                     <nav class="site-navigation position-relative text-right" role="navigation">
 
                         <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block ">
-                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="active"><a href="/index">Home</a></li>
                             <li><a href="about.html">About Us</a></li>
                             <li class="has-children">
                                 <a href="services.html">Services</a>
@@ -76,39 +76,39 @@
                                 </ul>
                             </li>
                             <li><a href="industries.html">Industries</a></li>
+
                             <li><a href="contact.html">Contact</a></li>
-                            <li><a></a></li>
+
                                 <!-- Authentication Links -->
                                 @guest
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <li>
+                                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                                     @if (Route::has('register'))
                                         <li >
-                                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                            <a href="{{ route('register') }}">{{ __('Register') }}</a>
                                         </li>
                                     @endif
                                 @else
-                                    <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                                    <li class="has-children">
+                                        <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             {{ Auth::user()->name }} <span class="caret"></span>
                                         </a>
+                                        <ul class="dropdown">
 
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                           <li> <a href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
-                                            </a>
+                                               </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf
-                                            </form>
-                                        </div>
+                                            </form></li>
                                     </li>
+                                    </ul>
                                 @endguest
-
-
                         </ul>
                     </nav>
                 </div>
@@ -121,8 +121,6 @@
         </div>
 
     </header>
-</nav>
-
 </nav>
 
   <main class ="py-4 " style="margin-top: 60px;">

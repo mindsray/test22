@@ -30,6 +30,12 @@ Route::get('/header', function () {
 Route::get('/login2', function () {
     return view('login2');
 });
+
+Route::get('/index', function () {
+    return view('index');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
